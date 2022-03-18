@@ -1,501 +1,474 @@
-*{
-    margin: 0;
-    padding: 0;
-    
-
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
 }
-a{
-    font-family: 'Roboto Condensed', sans-serif;
+html,
+body {
+  font-size: 1rem;
+  overflow-x: hidden;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
 }
-.img{
-   /* background-image: url(Property-Finders-1-1110x385.jpg); */
-   background-repeat: no-repeat;
-   opacity:0.9 ;
-   
-    height:679px;
-    width: 1510px;
-    
+a {
+  font-family: "Roboto Condensed", sans-serif;
 }
 
+:root {
+  --transition: all 0.3s ease-in-out;
+}
+.img {
+  max-width: 100%;
+  height: auto;
+}
 
-button{
-    box-shadow: 1px 1px 1px rgb(212, 224, 224);
-    border-radius: 5px;
-    cursor: pointer;
-    color: black;
-    background-color: aqua;
-    height: 25px;
-    width: 50px;
-    margin-left: 10px;
-}.text{
-    border-radius: 5px;
-    background-color:beige;
-    height: 23px;
-    text-align: center;
+button {
+  box-shadow: 1px 1px 1px rgb(212, 224, 224);
+  border-radius: 5px;
+  cursor: pointer;
+  color: black;
+  background-color: aqua;
+  height: 25px;
+  width: 50px;
+  margin-left: 10px;
+}
+.text {
+  border-radius: 5px;
+  background-color: beige;
+  height: 23px;
+  text-align: center;
 }
 
 .navbar {
-    background: fixed;
-    background-color: rgb(119, 117, 117);
-    border-radius: 0px;
-    
+  background: fixed;
+  background-color: rgb(119, 117, 117);
+  border-radius: 0px;
 }
 .navbar li {
-    background: fixed;
-    float: left;
-    margin: 13px 20px;
-    list-style: none;
-    
-
+  background: fixed;
+  float: left;
+  margin: 13px 20px;
+  list-style: none;
 }
-.navbar ul{
-    background: fixed;
-    overflow: auto;
-
-    
+.navbar ul {
+  background: fixed;
+  overflow: auto;
 }
-.navbar li a{
-    background: fixed;
-    color: aliceblue;
-    text-decoration: none;
-    padding: 3px 3px;
+.navbar li a {
+  background: fixed;
+  color: aliceblue;
+  text-decoration: none;
+  padding: 3px 3px;
 }
-.search{
-    float: right;
-    color: aliceblue;
-    padding: 12px 75px;
+.search {
+  float: right;
+  color: aliceblue;
+  padding: 12px 75px;
 }
-h1{
-    position: absolute;
-    top: 15%;
-    left: 50px;
-    font-size: 50px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+h1 {
+  position: absolute;
+  top: 15%;
+  left: 50px;
+  font-size: 50px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-p{
-    position: absolute;
-    top: 35%;
-    left: 60px;
-    font-size: 20px; 
-    color: rgb(20, 70, 94);
-    font-family: serif;
+p {
+  position: absolute;
+  top: 35%;
+  left: 60px;
+  font-size: 20px;
+  color: rgb(20, 70, 94);
+  font-family: serif;
 }
-/* .footer{ 
-    background-color: aqua;
-    height: 20px;
-    width: 250px;
-    border: 5px solid black;
-    text-align: center;
-    align-items: center;
-    align-content: center;
-    color: blue;
-    margin-left: 600px;
-    margin-top: 50px;
-
-}  */
-.hr{
-    background-color: rgb(103, 104, 105);
-    margin-top: 50px;
-    height: 5px ;
-    margin-bottom: 4px;
-    align-items: center;
-    text-align: center;
-    align-content: center;
-    width: 600px;
-    margin-left: 400px;
+.footer {
+  background-color: aqua;
+  height: 20px;
+  width: 250px;
+  border: 5px solid black;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  color: blue;
+  margin-left: 600px;
+  margin-top: 50px;
+}
+.hr {
+  background-color: rgb(103, 104, 105);
+  margin-top: 50px;
+  height: 5px;
+  margin-bottom: 4px;
+  align-items: center;
+  text-align: center;
+  align-content: center;
+  width: 600px;
+  margin-left: 400px;
 }
 
-.navbar li a:hover{
-    opacity:0.9;
-    color: rgb(63, 64, 65);
-    /* border: 0.5px dashed #c5f1fc;
+.navbar li a:hover {
+  opacity: 0.9;
+  color: rgb(63, 64, 65);
+  /* border: 0.5px dashed #c5f1fc;
     border-radius: 3px; */
-    height: 30px;
-    /* border-color: rgb(61, 61, 61); */
+  height: 30px;
+  /* border-color: rgb(61, 61, 61); */
 }
-.getStarted{
-    box-shadow: 10px 10px 8px #697979;
-    /* width: 90px;
+.getStarted {
+  box-shadow: 10px 10px 8px #697979;
+  /* width: 90px;
     height: 50px;
     background-color: antiquewhite;
     position: absolute;
     top: 45%;
     margin-left: 60px;
     box-shadow: 5px solid black; */
-    position: absolute;
-    left: 50px;
-    top: 45%;
-    margin-left: 100px;
-    width: 180px;
+  position: absolute;
+  left: 50px;
+  top: 45%;
+  margin-left: 100px;
+  width: 180px;
   height: 60px;
   margin: 10px;
   border-radius: 20px;
   font-size: 15px;
   color: #708090;
   background-color: #aad5ff;
-  
+
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
-.getStarted:hover{
-    background-color: aquamarine;
-
+.getStarted:hover {
+  background-color: rgb(84, 148, 127);
 }
-.login{
-    background-color: transparent;
-    color: #f7f2f2;
-    width: 100px;
-    height: 29px;
-    border-radius: 9px;
-    border: solid black;
-    /* box-shadow: 10px 10px 8px #424040; */
+.login {
+  background-color: rgb(10, 131, 121);
+  color: #f7f2f2;
+  width: 100px;
+  height: 29px;
+  border-radius: 9px;
+  border: 0.01em solid rgb(13, 105, 105);
 }
-.login:hover{
-    box-shadow: 5px 5px 8px #424040;
+.signup {
+  background-color: rgb(2, 131, 55);
+  color: #f7f2f2;
+  width: 100px;
+  height: 29px;
+  border-radius: 9px;
+  border: 0.01em solid rgb(43, 65, 15);
 }
- .profile{
-    color: #020205;
-    font-family:cursive;
-    
-    
-    
-
-} 
-.profile1{
-    border-radius: 10px;
-    position: absolute;
-    /* margin: 20px 30px 20px 20px; */
-    border: 2px solid black;
-    background-image: url(kirtipur.jpg);
-    height: 300px;
-    width: 300px;
-    margin-left: 300px;
-    margin-top: 100px;
-    
-    opacity: 0.7;
-    display: flex;
-    font-size: 40px;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 10px 10px 8px #888888;
-    cursor: pointer;
-
-
+.login:hover,
+.signup:hover {
+  box-shadow: 5px 5px 8px #424040;
+  opacity: 0.5;
+  color: black;
 }
-.profile2{
-    border-radius: 10px;
-    position: absolute;
-    /* margin: 20px 30px 20px 20px; */
-    border: 2px solid black;
-    background-image: url(kantipur.jpg);
-    height: 300px;
-    width: 300px;
-    margin-left: 650px;
-    margin-top:100px;
-    opacity: 0.7;
-    font-size: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 10px 10px 8px #888888;
-    cursor: pointer;
-
-
-
+.profile {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-size: 1.3em;
 }
-.profile3{
-    border-radius: 10px;
-    position: absolute;
-    /* margin: 20px 30px 20px 20px; */
-    border: 2px solid black;
-    background-image: url(baneshwor.jpg);
-    opacity: 0.7;
-    height: 300px;
-    width: 300px;
-    font-size: 40px;
-    margin-left: 1000px;
-    margin-top: 100px;
-    text-align: center;
-    align-items: center;
-    align-content: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 10px 10px 8px #888888;
-    cursor: pointer;
+.profile1 {
+  border-radius: 10px;
+  position: absolute;
+  /* margin: 20px 30px 20px 20px; */
+  border: 2px solid black;
+  background: url(Beautiful_apartment.jpeg) no-repeat center / cover border-box;
+  height: 300px;
+  width: 300px;
+  margin-left: 300px;
+  margin-top: 100px;
+  transition: var(--transition);
 
-
+  opacity: 0.7;
+  display: flex;
+  font-size: 40px;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 10px 10px 8px #888888;
+  cursor: pointer;
 }
-.profilen{
-    border-radius: 10px;
-    position: absolute;
-    /* margin: 20px 30px 20px 20px; */
-    border: 2px solid black;
-    background-image: url(baneshwor.jpg);
-    opacity: 0.5;
-    height: 300px;
-    width: 750px;
-    font-size: 40px;
-    margin-left: 350px;
-    margin-top: 500px;
-    text-align: center;
-    align-items: center;
-    align-content: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0.8;
-    background-repeat: no-repeat;
-    box-shadow: 10px 10px 8px #888888;
-    cursor: pointer;
+.profile2 {
+  border-radius: 10px;
+  position: absolute;
+  /* margin: 20px 30px 20px 20px; */
+  border: 2px solid black;
+  background: url("New_baneshwor.jpeg") no-repeat center/ cover content-box;
+  height: 300px;
+  width: 300px;
+  margin-left: 650px;
+  margin-top: 100px;
+  opacity: 0.7;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 10px 10px 8px #888888;
+  cursor: pointer;
+  transition: var(--transition);
 }
-.profile1:hover , .profile2:hover , .profile3:hover , .profilen:hover{
-    box-shadow: 10px 10px 8px #64f7f7;
-} 
+.profile3 {
+  border-radius: 10px;
+  position: absolute;
+  /* margin: 20px 30px 20px 20px; */
+  border: 2px solid black;
+  background: url(Bhaktapur.jpeg) no-repeat center center/cover padding-box;
+  opacity: 0.7;
+  height: 300px;
+  width: 300px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 40px;
+  margin-left: 1000px;
+  margin-top: 100px;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 10px 10px 8px #888888;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.profilen {
+  border-radius: 10px;
+  position: absolute;
+  /* margin: 20px 30px 20px 20px; */
+  border: 2px solid black;
+  background: url(Apartment.jpeg) no-repeat center/cover;
+  opacity: 0.5;
+  height: 300px;
+  width: 750px;
+  font-size: 40px;
+  margin-left: 350px;
+  margin-top: 500px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+  box-shadow: 10px 10px 8px #888888;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.profile1:hover,
+.profile2:hover,
+.profile3:hover {
+  transform: scale(1.1);
+  opacity: 0.6;
+  transition: transform 2s cubic-bezier(0.445, 0.05, 0.55, 0.95) ease-in;
+}
 /* Background color here */
-.color{
-    background-color: #ece5e5;
-    height: 2000px;
-    border-radius: 2px;
+.color {
+  margin-top: 0;
+  background-color: #cfcdcd;
+  height: 110vh;
+  border-radius: 2px;
 }
-.ManyMore{
-    background-color: #424040;
-    width: 90px;
-    height: 30px;
-    right: 64%;
-    position: absolute;
+.ManyMore {
+  width: 90px;
+  height: 30px;
+  right: 64%;
+  top: 60%;
+  position: absolute;
 }
-.ManyMore:hover{
-    box-shadow: 5px 5px 8px #575757;
-    background-color: #708090;
+.ManyMore:hover {
+  mix-blend-mode: color;
+}
+.feedback {
+  border: 3px solid black;
+  width: 1400px;
+  left: 5%;
+  top: 220%;
+  height: 500px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  border-top-style: dashed;
+  border-radius: 25px;
+  background-image: url(comment.jpg);
+}
+.feedbackButton {
+  background-color: #c6c6da;
+  width: 150px;
+  height: 40px;
+  box-shadow: 5px 5px 5px #575757;
+  color: rgb(1, 105, 95);
+  font-family: serif;
 
+  box-shadow: 5px 5px 4px #000000;
 }
-.feedback{
-   
-    border: 3px solid black;
-    width: 1400px;
-    left: 5%;
-    top: 220%;
-    height: 500px;
-    position: absolute;
-     display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 200px;
-    border-top-style: dashed;
-    border-radius: 25px;
-    background-image: url(comment.jpg);
+h2:hover {
+  box-shadow: 3px 3px 1px #161616;
 }
-.feedbackButton{
-    background-color: #c6c6da;
-    width: 150px;
-    height: 40px;
-    box-shadow: 5px 5px 5px #575757;
-    color:rgb(1, 105, 95);
-    font-family: serif;
-    
-    box-shadow: 5px 5px 4px #000000;
+h2 {
+  color: #0d1113;
+  box-decoration-break: slice;
+  box-shadow: 2px 2px 2px #161616;
+  border-radius: 1px;
+  cursor: pointer;
+}
+.feedbackButton:hover {
+  box-shadow: 2px 2px 2px rgb(173, 170, 170);
+}
+.footer1 {
+  font-family: "Cambria, Cochin", Georgia, Times, "Times New Roman", serif;
+}
+.copyright {
+  background-color: #575757;
+  height: 1.2em;
+  position: relative;
+  bottom: 0;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.gmap_canvas {
+  top: 260%;
+  left: 55%;
+  border: 2px solid black;
+  border-radius: 5px;
+  position: absolute;
+  box-shadow: 5px 5px 5px black;
+}
+.gmap_canvas:hover {
+  box-shadow: 4px 4px 4px wheat;
+}
+.li {
+  position: absolute;
+  top: 270%;
+  color: #575757;
 
+  margin-left: 199px;
+  display: block;
+  font-size: 25px;
+  text-transform: capitalize;
+}
+.map {
+  position: absolute;
+  top: 250%;
+  font-size: 1.3em;
+  left: 60%;
+}
+.email {
+  position: absolute;
+  top: 278%;
+  margin-left: 200px;
 
+  font-size: 15px;
+  font-weight: 100;
 }
-h2:hover{
-    box-shadow: 3px 3px 1px #161616;
+.email:hover {
+  color: #3e3f3f;
+}
+.email1 {
+  font-weight: 100;
+  font-size: 15px;
+  position: absolute;
+  top: 282%;
 
+  margin-left: 200px;
 }
-h2{
-    color: #0d1113;
-    box-decoration-break:slice;
-    box-shadow: 2px 2px 2px #161616;
-    border-radius: 1px;
-    cursor: pointer;
+.facebook {
+  border-radius: 20px;
+  height: 25px;
+  position: absolute;
+  top: 302%;
+  left: 17.5%;
+  border: 2px solid black;
 }
-.feedbackButton:hover{
-    box-shadow: 2px 2px 2px rgb(173, 170, 170);
+.whatsapp {
+  height: 25px;
+  border-radius: 20px;
+  position: absolute;
+  top: 302%;
+  left: 20%;
+  border: 2px solid black;
 }
-.footer1{
-    font-family:'Cambria, Cochin', Georgia, Times, 'Times New Roman', serif;
+.discord {
+  border-radius: 20px;
+  height: 25px;
+  position: absolute;
+  top: 302%;
+  left: 24%;
+  border: 2px solid black;
 }
-.last{
-    background-color: #575757;
-    height: 50px;
-    position: absolute;
-    width: 1519px;
-     display: flex;
-    align-items: center;
-    justify-content: center;
-    top: 260%;
-    border-radius: 4px;
+p1 {
+  border-radius: 20px;
+  height: 25px;
+  position: absolute;
+  font-size: 25px;
+  top: 295%;
+  left: 17%;
+}
+.facebook:hover {
+  border: 2px dotted black;
+  box-shadow: 1px 1px 1px black;
+}
+.discord:hover {
+  border: 2px dotted black;
+  box-shadow: 1px 1px 1px black;
+}
+.whatsapp:hover {
+  border: 2px dotted black;
+  box-shadow: 1px 1px 1px black;
+}
+.termscondition {
+  position: absolute;
+  top: 314%;
+  left: 17%;
+  font-size: 25px;
+  color: #6e6c6c;
+}
+.terms {
+  position: absolute;
+  top: 324%;
+  left: 17.2%;
+  text-decoration: none;
+  font-size: 15px;
 
+  color: #242323;
 }
-.gmap_canvas{
-    top: 278%;
-    left: 50%;
-    border: 2px solid black; 
-    border-radius: 5px;
-    position: absolute;  
-    box-shadow: 5px 5px 5px black;
+.terms:hover {
+  color: #4d5050;
+}
+.home1 {
+  position: absolute;
+  top: 321%;
+  left: 17.3%;
+  text-decoration: none;
+  font-size: 15px;
 
+  color: #242323;
+}
+.home1:hover {
+  color: #6a6b6b;
+}
+.information {
+  position: absolute;
+  top: 332%;
+  left: 17.2%;
+  text-decoration: none;
+  font-size: 23px;
 
+  color: #706e6e;
 }
-.gmap_canvas:hover{
-    box-shadow: 4px 4px 4px wheat;
-}
-.li{
-    position: absolute;
-    top: 270%;
-    color: #575757;
-    
-    
-    margin-left: 199px;
-    display: block;
-    font-size: 25px;
-    text-transform: capitalize;
-}
-.map{
-    top: 270%;
-    font-size: 25px;
-    left: 50%;
-    border-radius: 5px;
-    position: absolute;
-    
-}
-.email{
-    position: absolute;
-    top: 278%;
-    margin-left: 200px;
- 
-    font-size: 15px;
-    font-weight: 100;
-    
-     
+.infor {
+  position: absolute;
+  top: 338%;
+  left: 17.2%;
+  text-decoration: none;
+  font-size: 15px;
 
+  color: #242323;
 }
-.email:hover{
-    color: #3e3f3f;
-}
-.email1{
-    font-weight: 100;
-    font-size: 15px;
-    position: absolute;
-    top: 282%;
-    
-    margin-left: 200px;
-     
-     
-  
-}
-.copyright{
-    color: #575757;
-    background-color: #949393;
-    width: max-content;
-    color: #caeeee;
-    border: 2px solid black;
-    border-radius: 4px;
-    text-align: center;
-    align-items: center;
-    align-self: center;
-    position: absolute;
-    right: 39%;
-    width: 400px;
-    top: 360%;
-}
-.facebook{
-    border-radius: 20px;
-    height: 25px;
-    position: absolute;
-    top: 302%;
-    left: 17.5%;
-    border: 2px solid black;
-}
-.whatsapp{
-    height: 25px;
-    border-radius: 20px;
-    position: absolute;
-    top: 302%;
-    left: 20%;
-    border: 2px solid black;
-    
-}
-.discord{
-    border-radius: 20px;
-    height: 25px;
-    position: absolute;
-    top: 302%;
-    left: 24%;
-    border: 2px solid black;
-}
-p1{
-    border-radius: 20px;
-    height: 25px;
-    position: absolute;
-    font-size: 25px;
-    top: 295%;
-    left: 17%;
-}
-.facebook:hover{
-    border: 2px dotted black;
-    box-shadow: 1px 1px 1px black;
-
-}
-.discord:hover{
-    border: 2px dotted black;
-    box-shadow: 1px 1px 1px black;
-}
-.whatsapp:hover{
-    border: 2px dotted black;
-    box-shadow: 1px 1px 1px black;
-}
-.termscondition{
-    position: absolute;
-    top: 314%;
-    left: 17%;
-    font-size: 25px;
-    color: #6e6c6c;
-}
-.terms{
-    position: absolute;
-    top: 324%;
-    left: 17.2%;
-    text-decoration: none;
-    font-size: 15px;
-    
-    color: #242323;
-}
-.terms:hover{
-    color: #4d5050;
-}
-.home1{
-    position: absolute;
-    top: 321%;
-    left: 17.3%;
-    text-decoration: none;
-    font-size: 15px;
-    
-    color: #242323;
-}
-.home1:hover{
-    color: #6a6b6b;
-}
-.information{
-    position: absolute;
-    top: 332%;
-    left: 17.2%;
-    text-decoration: none;
-    font-size: 23px;
-    
-    color: #706e6e;
-}
-.infor{
-    position: absolute;
-    top: 338%;
-    left: 17.2%;
-    text-decoration: none;
-    font-size: 15px;
-    
-    color: #242323;
-}
-.infor:hover{
-    color: #6a6b6b;
+.infor:hover {
+  color: #6a6b6b;
 }
