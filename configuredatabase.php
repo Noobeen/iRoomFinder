@@ -1,5 +1,5 @@
 <?php
-
+//plz run this first as it will create db and table for you to run remaining scripts
 $server="localhost";
 $user="root";
 $password="";
