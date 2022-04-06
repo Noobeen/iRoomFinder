@@ -6,6 +6,7 @@ class Register
     public $email;
     public $password;
     public $conn;
+    public $vkey;
     
 
 
@@ -21,25 +22,31 @@ class Register
             die ("sorry unable to take you data due to ".$this->conn->connect_error);
         }
     }
-    
+    //this function checks and inserts users into the database
     function duplication_check()
-    {
+    {   
+        //creating sql query
         $sql=$this->conn->prepare("SELECT email FROM signin WHERE email=?");
         $sql->bind_param("s",$this->email);
         if(mysqli_stmt_execute($sql))
         {
             mysqli_stmt_store_result($sql);
+            
+            //checking email address wheather it exists already or not
             if(mysqli_stmt_num_rows($sql) > 0)
             {
                 $sql->close();
-                die("This username is already taken"); 
+                die("This email is already taken"); 
             }
             else
             {
+                $this->vkey=md5(time().$this->email);//for email verification hash is generated
                 $sql->close();
-                $reg=$this->conn->prepare("INSERT INTO signin(username,email,log_password)VALUES(?,?,?)");
-                $reg->bind_param("sss",$this->username,$this->email,$this->password);
-
+                //inserting into database
+                $reg=$this->conn->prepare("INSERT INTO signin(username,email,log_password,v_key)VALUES(?,?,?,?)");
+                $reg->bind_param("ssss",$this->username,$this->email,$this->password,$this->vkey);
+                
+                //checking wheather the insertion was succesfull or not
                 if(mysqli_stmt_execute($reg))
                 {
                     echo "SUCESSFULLY INSERTED AS USER";
